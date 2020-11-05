@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =3
+let g:netrw_dirhist_3='/home/marcos/.config/nvim/keys'
+let g:netrw_dirhist_2='/home/marcoshdezcam/Downloads/template_nvim_config/themes'
+let g:netrw_dirhist_1='/home/marcoshdezcam/.config/nvim/autoload'
