@@ -38,7 +38,7 @@ set t_Co=256                    " Support fr 256 colors
 set ruler                       " Always show cursor position
 set mouse=a                     " Enable mouse
 set title                       " Show current file on window title
-set so=999                      " Cursor on the middle of the screen
+"set so=999                      " Cursor on the middle of the screen
 
 
 " set laststatus=2                " Always display status line

@@ -62,3 +62,7 @@ pcmanfm/
 kdeglobals
 okularpartrc
 okularrc
+flameshot/
+menus/
+nvim/autoload/plugged/gruvbox/
+teamviewer/

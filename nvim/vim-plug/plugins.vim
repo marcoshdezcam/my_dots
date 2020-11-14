@@ -60,6 +60,7 @@ Plug 'vim-ruby/vim-ruby'
 
 " Themes & Appereance
 Plug 'ayu-theme/ayu-vim'
+Plug 'morhetz/gruvbox'
 " Enable transparent background
 autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
 Plug 'vim-airline/vim-airline-themes'
