@@ -17,3 +17,4 @@ source $HOME/.config/nvim/plug-config/start-screen.vim
 
 " Airline config
 source $HOME/.config/nvim/themes/airline.vim
+
