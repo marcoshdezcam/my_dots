@@ -63,7 +63,6 @@ okularpartrc
 okularrc
 flameshot/
 menus/
-nvim/autoload/plugged/gruvbox/
 teamviewer/
 Thunar/
 arcolinux-tweak-tool/
@@ -76,8 +75,6 @@ gsimplecal/
 nano/
 nomacs/
 nvim/themes/
-polybar/
-rofi/
 termite/
 variety/
 vlc/
