@@ -81,3 +81,9 @@ vlc/
 volumeicon/
 xfce4/
 yad.conf
+Code/
+Joplin/
+autorandr/
+joplin-desktop/
+joplin/
+polybar/scripts/check-all-updates.sh
