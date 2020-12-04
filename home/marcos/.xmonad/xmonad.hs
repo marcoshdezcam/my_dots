@@ -100,6 +100,16 @@ myManageHook = composeAll . concat $
       , "Pamac-manager"
       , "Slack"
       , "Thunar"
+      , "Chromium"
+      , "Spotify"
+      , "Caprine"
+      , "whatsapp-nativefier-d40211"
+      , "Blueberry.py"
+      , "Pavucontrol"
+      , "Arcologout.py"
+      , "Gnome-disks"
+      , "GitKraken"
+      , "Variety"
       ]
     myTFloats = ["Downloads", "Save As..."]
     myRFloats = []
@@ -136,7 +146,7 @@ myMouseBindings (XConfig {XMonad.modMask = modMask}) = M.fromList $
 ----------------------------------------------------------------------
 myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
 ----------------------------------------------------------------------
-------------------------------------------------------- SUPER + F KEYS
+------- LAUNCH FAVORITE APPS -------------------------- SUPER + F KEYS
 ----------------------------------------------------------------------
   [ ((modMask, xK_f), sendMessage $ Toggle NBFULL)
   , ((modMask, xK_q), kill )
@@ -145,16 +155,19 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   , ((modMask, xK_x), spawn $ "arcolinux-logout" )
   , ((modMask, xK_Escape), spawn $ "xkill" )
   , ((modMask, xK_Return), spawn $ "alacritty" )
-  --  , ((modMask, xK_F1), spawn $ "" )
-  --  , ((modMask, xK_F2), spawn $ "" )
-  --  , ((modMask, xK_F3), spawn $ "" )
-  --  , ((modMask, xK_F4), spawn $ "" )
-  --  , ((modMask, xK_F5), spawn $ "" )
-  --  , ((modMask, xK_F6), spawn $ "" )
-  --  , ((modMask, xK_F7), spawn $ "" )
-  --  , ((modMask, xK_F8), spawn $ "" )
-  --  , ((modMask, xK_F9), spawn $ "" )
-  , ((modMask, xK_F10), spawn $ "spotify" )
+
+  , ((modMask, xK_F1), spawn $ "firefox" )
+  , ((modMask, xK_F2), spawn $ "brave" )
+  , ((modMask, xK_F3), spawn $ "chromium" )
+  , ((modMask, xK_F4), spawn $ "emacs" )
+
+  , ((modMask, xK_F5), spawn $ "gitkraken" )
+  , ((modMask, xK_F6), spawn $ "joplin" )
+  , ((modMask, xK_F7), spawn $ "cacher" )
+  , ((modMask, xK_F8), spawn $ "spotify" )
+
+  , ((modMask, xK_F9), spawn $ "blueberry" )
+  , ((modMask, xK_F10), spawn $ "pavucontrol" )
   , ((modMask, xK_F11), spawn $ "rofi -show run -fullscreen" )
   , ((modMask, xK_F12), spawn $ "rofi -show run" )
 ----------------------------------------------------------------------
@@ -174,33 +187,37 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
 ----------------------------------------------------------------------
 --  , ((controlMask .|. mod1Mask , xK_Next ), spawn $ "conky-rotate -n")
 --  , ((controlMask .|. mod1Mask , xK_Prior ), spawn $ "conky-rotate -p")
-  , ((controlMask .|. mod1Mask , xK_a ), spawn $ "xfce4-appfinder")
-  , ((controlMask .|. mod1Mask , xK_b ), spawn $ "thunar")
-  , ((controlMask .|. mod1Mask , xK_e ), spawn $ "arcolinux-tweak-tool")
-  , ((controlMask .|. mod1Mask , xK_f ), spawn $ "firefox")
-  , ((controlMask .|. mod1Mask , xK_g ), spawn $ "chromium -no-default-browser-check")
-  , ((controlMask .|. mod1Mask , xK_i ), spawn $ "nitrogen")
-  , ((controlMask .|. mod1Mask , xK_k ), spawn $ "arcolinux-logout")
-  , ((controlMask .|. mod1Mask , xK_l ), spawn $ "arcolinux-logout")
-  , ((controlMask .|. mod1Mask , xK_m ), spawn $ "xfce4-settings-manager")
-  , ((controlMask .|. mod1Mask , xK_o ), spawn $ "$HOME/.xmonad/scripts/picom-toggle.sh")
-  , ((controlMask .|. mod1Mask , xK_p ), spawn $ "pamac-manager")
+  --, ((controlMask .|. mod1Mask , xK_a ), spawn $ "xfce4-appfinder")
+  --, ((controlMask .|. mod1Mask , xK_b ), spawn $ "thunar")
+  --, ((controlMask .|. mod1Mask , xK_e ), spawn $ "arcolinux-tweak-tool")
+  -- , ((controlMask .|. mod1Mask , xK_f ), spawn $ "firefox")
+  --, ((controlMask .|. mod1Mask , xK_g ), spawn $ "chromium -no-default-browser-check")
+  --, ((controlMask .|. mod1Mask , xK_i ), spawn $ "nitrogen")
+  --, ((controlMask .|. mod1Mask , xK_k ), spawn $ "arcolinux-logout")
+  --, ((controlMask .|. mod1Mask , xK_l ), spawn $ "arcolinux-logout")
+  --, ((controlMask .|. mod1Mask , xK_m ), spawn $ "xfce4-settings-manager")
+  --, ((controlMask .|. mod1Mask , xK_o ), spawn $ "$HOME/.xmonad/scripts/picom-toggle.sh")
+  --, ((controlMask .|. mod1Mask , xK_p ), spawn $ "pamac-manager")
   , ((controlMask .|. mod1Mask , xK_r ), spawn $ "rofi-theme-selector")
-  , ((controlMask .|. mod1Mask , xK_s ), spawn $ "spotify")
-  , ((controlMask .|. mod1Mask , xK_t ), spawn $ "urxvt")
-  , ((controlMask .|. mod1Mask , xK_u ), spawn $ "pavucontrol")
+  --, ((controlMask .|. mod1Mask , xK_s ), spawn $ "spotify")
+  --, ((controlMask .|. mod1Mask , xK_t ), spawn $ "urxvt")
+  --, ((controlMask .|. mod1Mask , xK_u ), spawn $ "pavucontrol")
+
 ----------------------------------------------------------------------
------------------------------------------------------------- ALT + ... 
+------------------------ VARIETY BACKGROUNDS -------------- CTRL + ALT
 ----------------------------------------------------------------------
 --  , ((mod1Mask, xK_f), spawn $ "variety -f" )
 --  , ((mod1Mask, xK_n), spawn $ "variety -n" )
 --  , ((mod1Mask, xK_p), spawn $ "variety -p" )
-  , ((mod1Mask, xK_r), spawn $ "xmonad --restart" )
 --  , ((mod1Mask, xK_t), spawn $ "variety -t" )
 --  , ((mod1Mask, xK_Up), spawn $ "variety --pause" )
 --  , ((mod1Mask, xK_Down), spawn $ "variety --resume" )
 --  , ((mod1Mask, xK_Left), spawn $ "variety -p" )
 --  , ((mod1Mask, xK_Right), spawn $ "variety -n" )
+----------------------------------------------------------------------
+------------------------------------------------------------ ALT + ... 
+----------------------------------------------------------------------
+--  , ((mod1Mask, xK_r), spawn $ "xmonad --restart" )
 --  , ((mod1Mask, xK_F2), spawn $ "gmrun" )
 --  , ((mod1Mask, xK_F3), spawn $ "xfce4-appfinder" )
 ----------------------------------------------------------------------
@@ -208,11 +225,9 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
 ----------------------------------------------------------------------
   , ((controlMask .|. shiftMask , xK_Escape ), spawn $ "xfce4-taskmanager")
 ----------------------------------------------------------------------
----------------------------------------------------------- SCREENSHOTS
+----------------------------------------------------------- SCREENSHOT
 ----------------------------------------------------------------------
   , ((0, xK_Print), spawn $ "flameshot gui")
-  , ((controlMask, xK_Print), spawn $ "xfce4-screenshooter" )
-  , ((controlMask .|. shiftMask , xK_Print ), spawn $ "gnome-screenshot -i")
 ----------------------------------------------------------------------
 ------------------------------------------------------ MULTIMEDIA KEYS
 ----------------------------------------------------------------------
@@ -263,12 +278,23 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   , ((modMask .|. shiftMask, xK_k), windows W.swapUp    )
 --------------------------- Swap the focused window with the previous window.
   , ((controlMask .|. modMask, xK_Up), windows W.swapUp  )
---------------------------- Shrink the master area.
-  , ((controlMask .|. shiftMask , xK_h), sendMessage Shrink)
---------------------------- Expand the master area.
-  , ((controlMask .|. shiftMask , xK_l), sendMessage Expand)
 --------------------------- Push window back into tiling.
   , ((controlMask .|. shiftMask , xK_t), withFocused $ windows . W.sink)
+
+-------------------------------------------------------------------------
+--------------------------------------------------------- WINDOW RESIZING
+-------------------------------------------------------------------------
+--------------------------- Shrink the master area.
+  , ((controlMask .|. modMask , xK_h), sendMessage Shrink)
+--------------------------- Expand the master area.
+  , ((controlMask .|. modMask , xK_l), sendMessage Expand)
+--------------------------- Expand the master area.
+  , ((controlMask .|. modMask , xK_j), sendMessage MirrorShrink)
+--------------------------- Expand the master area.
+  , ((controlMask .|. modMask , xK_k), sendMessage MirrorExpand)
+-------------------------------------------------------------------------
+------------------------------------------------------------- MASTER AREA
+-------------------------------------------------------------------------
 --------------------------- Increment the number of windows in the master area.
   , ((controlMask .|. modMask, xK_Left), sendMessage (IncMasterN 1))
 --------------------------- Decrement the number of windows in the master area.
