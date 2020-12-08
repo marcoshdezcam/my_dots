@@ -25,7 +25,6 @@ Kvantum/
 manjaro-hello.json
 mimeapps.list
 monitors.xml
-monitors.xml~
 nautilus/
 neofetch/
 omf/
@@ -74,7 +73,6 @@ galculator/
 gsimplecal/
 nano/
 nomacs/
-nvim/themes/
 termite/
 variety/
 vlc/
