@@ -51,36 +51,39 @@
 
 (package! evil-tutor)
 
-;; PLUGIN CONFIGS
 
+;; ----------------------------------------------------------------------------------
+;; ----------------------       RUBY PLUGINS    -------------------------------------
+;; ----------------------------------------------------------------------------------
 ;; ruby-electric Autoclose tools
 (add-hook 'ruby-mode-hook 'ruby-electric-mode)
 
-;; RBENV set Ruby version
-(global-rbenv-mode)
-(rbenv-use-global)
 
 ;; Set ruby-mode only for Ruby files
 (add-to-list 'auto-mode-alist
-             '("\\.\\(?:cap\\|gemspec\\|irbrc\\|gemrc\\|rake\\|rb\\|ru\\|thor\\)\\'" . ruby-mode))
+            '("\\.\\(?:cap\\|gemspec\\|irbrc\\|gemrc\\|rake\\|rb\\|ru\\|thor\\)\\'" . ruby-mode))
 (add-to-list 'auto-mode-alist
              '("\\(?:Brewfile\\|Capfile\\|Gemfile\\(?:\\.[a-zA-Z0-9._-]+\\)?\\|[rR]akefile\\)\\'" . ruby-mode))
 
+;; RBENV set Ruby version
+;;(global-rbenv-mode)
+;;(rbenv-use-global)
+
 ;; seeing-is-believing
-(setq seeing-is-believing-prefix "C-,")
-(add-hook 'ruby-mode-hook 'seeing-is-believing)
-(require 'seeing-is-believing)
+;;(setq seeing-is-believing-prefix "C-,")
+;;(add-hook 'ruby-mode-hook 'seeing-is-believing)
+;;(require 'seeing-is-believing)
 
 ;; IRB from Emacs
-(autoload 'inf-ruby-minor-mode "inf-ruby" "Run an inferior Ruby process" t)
-(add-hook 'ruby-mode-hook 'inf-ruby-minor-mode)
+;;(autoload 'inf-ruby-minor-mode "inf-ruby" "Run an inferior Ruby process" t)
+;;(add-hook 'ruby-mode-hook 'inf-ruby-minor-mode)
 
 ;; Fira Code Ligatures
-(global-fira-code-mode)
+;;(global-fira-code-mode)
 
 ;; Format Rubocop on save
-(use-package rubocopfmt
-						   :hook
-							   (ruby-mode . rubocopfmt-mode))
-(require 'rubocopfmt)
-(add-hook 'ruby-mode-hook #'rubocopfmt-mode)
+;;(use-package rubocopfmt
+;;   :hook
+;;   (ruby-mode . rubocopfmt-mode))
+;;(require 'rubocopfmt)
+;;(add-hook 'ruby-mode-hook #'rubocopfmt-mode)

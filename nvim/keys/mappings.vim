@@ -1,6 +1,3 @@
-" Change leader key to ,
-let mapleader=","
-
 " Change between buffers
 nnoremap <Tab> :b<Space>
 
