@@ -54,13 +54,28 @@ Plug 'norcalli/nvim-colorizer.lua'
 
 " ALE (Asynchronous Lint Engine)
 Plug 'dense-analysis/ale'
- 
+
+" Comment/Uncomment code 
+Plug 'tpope/vim-commentary'
+
+" Useful for Go-to definition
+" Automate c-tags creation
+Plug 'ludovicchabant/vim-gutentags'
+
+
+" -------------------------------------------- RUBY & Ruby on Rails
 " Ruby
 Plug 'vim-ruby/vim-ruby'
 
+" RoR
+Plug 'tpope/vim-rails'
+
+" -------------------------------------------- RUBY & Ruby on Rails
+ 
 " Themes & Appereance
 Plug 'ayu-theme/ayu-vim'
 Plug 'morhetz/gruvbox'
+
 " Enable transparent background
 autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
 Plug 'vim-airline/vim-airline-themes'
@@ -89,5 +104,5 @@ set termguicolors
 let ayucolor="dark"
 
 " Theme
-colorscheme ayu
+colorscheme gruvbox
 
