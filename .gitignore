@@ -89,4 +89,6 @@ darktable/
 libreoffice/
 obs-studio/
 ristretto/
-nvim/autoload/plugged/**
+nvim/autoload/plugged/**/**
+
+nvim/autoload/plugged/
