@@ -1,4 +1,4 @@
-syntax enable
+syntax enable 									" Syntax color for themes
 set hidden                      " Multiple buffers open
 set fileencoding=utf-8          " File encoding
 

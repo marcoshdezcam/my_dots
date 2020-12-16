@@ -105,3 +105,5 @@ eval "$(rbenv init -)"
 # EMACS PATH
 export PATH="$HOME/.emacs.d/bin:$PATH"
 
+# PIP Path
+export PATH="$HOME/.local/bin:$PATH"

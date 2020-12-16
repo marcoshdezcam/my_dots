@@ -92,3 +92,4 @@ ristretto/
 nvim/autoload/plugged/**/**
 
 nvim/autoload/plugged/
+tags
