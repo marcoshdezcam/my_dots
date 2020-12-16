@@ -62,6 +62,8 @@ Plug 'tpope/vim-commentary'
 " Automate c-tags creation
 Plug 'ludovicchabant/vim-gutentags'
 
+" Change sorrounding tags easily
+Plug 'tpope/vim-surround'
 
 " -------------------------------------------- RUBY & Ruby on Rails
 " Ruby
