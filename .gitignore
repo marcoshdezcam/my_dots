@@ -73,7 +73,6 @@ galculator/
 gsimplecal/
 nano/
 nomacs/
-termite/
 variety/
 vlc/
 volumeicon/
@@ -93,3 +92,7 @@ nvim/autoload/plugged/**/**
 
 nvim/autoload/plugged/
 tags
+
+termite/themes/
+
+termite/themesold/
