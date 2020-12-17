@@ -369,59 +369,23 @@ bindsym --release $mod+Escape exec xkill
 #####################################################################################################################
 ##############################              FAVORITE APPS --- F KEYS                #################################
 #####################################################################################################################
-############################################# MOST USED APPS - ADDED MANUALLY
-# WEB
-# F1: Firefox   F2: Chromium    F3:Brave  F4:Spotify
-# F4: Emacs     F5: Gitkraken   F6:Cacher F7:Joplin
-# SETTINGS
-# F9:Blueberry F10:Pavucontrol F11:Rofi Fullscreen F12:Rofi
+bindsym $mod+F1 exec --no-startup-id firefox;focus
+bindsym $mod+F2 exec --no-startup-id chromium;focus
+bindsym $mod+F3 exec --no-startup-id spotify;focus
+bindsym $mod+F4 exec --no-startup-id gitkraken;focus
+bindsym $mod+F5 exec --no-startup-id cacher;focus
+bindsym $mod+F6 exec --no-startup-id postman;focus
+bindsym $mod+F7 exec --no-startup-id emacs;focus
+bindsym $mod+F8 exec --no-startup-id code;focus
+bindsym $mod+F9 exec --no-startup-id blueberry;focus
+bindsym $mod+F10 exec --no-startup-id pavucontrol;focus
 
-
-#WORKSPACE RELATED
-#workspace 1 related
-#bindsym $mod+F1 exec --no-startup-id exo-open --launch webbrowser;focus
-#qwerty/azerty conflict with w
-#bindsym $mod+w exec --no-startup-id exo-open --launch webbrowser;focus
-#bindsym control+mod1+f exec --no-startup-id firefox;focus
-#bindsym control+mod1+v exec --no-startup-id vivaldi-stable;focus
-#bindsym control+mod1+g exec --no-startup-id chromium;focus
-#workspace 2 related
-#bindsym $mod+F2 exec --no-startup-id geany;focus
-#bindsym $mod+F2 exec --no-startup-id atom;focus
-#workspace 3 related
-#bindsym $mod+F3 exec --no-startup-id inkscape;focus
-#workspace 4 related
-#bindsym $mod+F4 exec --no-startup-id gimp;focus
-#workspace 5 related
-#bindsym $mod+F5 exec --no-startup-id meld;focus
-#bindsym control+mod1+i exec --no-startup-id nitrogen;focus
-#workspace 6 related
-#bindsym $mod+F6 exec --no-startup-id vlc;focus
-#workspace 7 related
-#bindsym $mod+F7 exec --no-startup-id virtualbox;focus
-#workspace 8 related
-#for_window [class="Thunar"] focus
-#bindsym $mod+F8 exec --no-startup-id thunar;focus
-#bindsym $mod+Shift+Return exec --no-startup-id thunar;focus
-#bindsym $mod+Shift+KP_Enter exec --no-startup-id thunar;focus
-#bindsym control+mod1+b exec --no-startup-id thunar;focus
-#workspace 9 related
-#bindsym $mod+F9 exec --no-startup-id evolution;focus
-#bindsym $mod+F9 exec --no-startup-id geary;focus
-#bindsym control+mod1+e exec --no-startup-id geary;focus
-#workspace 10 related
-#bindsym $mod+F10 exec --no-startup-id spotify;focus
-#bindsym control+mod1+s exec --no-startup-id spotify;focus
+bindsym $mod+Shift+Return exec --no-startup-id thunar;focus
 
 #####################################################################################################################
 #################                          screenshots                                              #################
 #####################################################################################################################
-#bindsym Print exec --no-startup-id scrot 'ArcoLinux-%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f $$(xdg-user-dir PICTURES)'
-#bindsym Control+Print exec --no-startup-id xfce4-screenshooter
-#bindsym Control+Shift+Print exec --no-startup-id gnome-screenshot -i
-#bindsym shift+Print exec --no-startup-id shutter
 bindsym Print exec --no-startup-id flameshot gui;focus
-
 
 #####################################################################################################################
 #################                          floating or tiled                                        #################
@@ -564,7 +528,6 @@ new_window normal
 #new_float pixel 1
 new_float normal
 #new_float none
-
 
 #####################################################################################################################
 #################                          Popups  control                                          #################
