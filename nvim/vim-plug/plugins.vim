@@ -12,6 +12,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 Plug 'mhinz/vim-startify'                 " Start menu
 Plug 'vim-airline/vim-airline'            " Airline Bar
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }   " Fuzzy search
+Plug 'junegunn/fzf.vim'
 Plug 'RRethy/vim-illuminate'              " Highlight other uses of the current word
 Plug 'psliwka/vim-smoothie'               " Smooth scrolling
 Plug 'liuchengxu/vim-which-key'           " Show key mappings
@@ -33,6 +34,7 @@ Plug 'dense-analysis/ale'                 " ALE (Asynchronous Lint Engine)
 Plug 'tpope/vim-commentary'               " Comment/Uncomment code 
 Plug 'ludovicchabant/vim-gutentags'       " Go-to definition (Automate c-tags creation)
 Plug 'tpope/vim-surround'                 " Change sorrounding tags easily
+Plug 'jiangmiao/auto-pairs'               " Auto close tags
 " -------------------------- Ruby & Ruby on Rails ------------------ {
 Plug 'vim-ruby/vim-ruby'                  " Ruby
 Plug 'tpope/vim-rails'                    " RoR
@@ -56,12 +58,20 @@ call plug#end()
 " ----------------------------------------------------------------- {
 let g:ruby_recommender_style = 1          " Ruby-settings
 let g:mkdp_path_to_chrome = "/usr/bin/firefox" " Markddown preview
+
+" ----------------------------- ALE ------------------------------- {
+"  Fix on save
+let g:ale_fix_on_save = 1  
+" ----------------------------- ALE ------------------------------- }
+
+
 " ----------------------------- FZF ------------------------------- {
 let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
   \ 'ctrl-s': 'split',
   \ 'ctrl-v': 'vsplit' }
 " ----------------------------- FZF ------------------------------- }
+  
 "--------------------------- TrueColors --------------------------- {
 if (has("nvim"))
   "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
@@ -74,15 +84,18 @@ if (has("termguicolors"))
   set termguicolors
 endif
 "---------------------------- TrueColors -------------------------- }
+
 "----------------------- Transparent background ------------------- {
 autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
 "----------------------- Transparent background ------------------- }
+
 "------------------------------ IndentLine ------------------------ {
 let g:indentLine_char = ''
 let g:indentLine_first_char = ''
 let g:indentLine_showFirstIndentLevel = 1
 let g:indentLine_setColors = 0
 "------------------------------ IndentLine ------------------------ }
+
 " -----------------------------------------------------------------
 " ---------------------- Plugin configuration ---------------------
 " ----------------------------------------------------------------- }

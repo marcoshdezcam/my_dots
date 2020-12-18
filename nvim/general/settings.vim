@@ -8,7 +8,7 @@ set tabstop=2                   " Insert 2 spaces with a tab
 "set smarttab                    " Auto-detect 2 or 4 spaces
 "set expandtab                   " Convert tabs into spaces
 "set smartindent                 " Makes indenting smart
-"set autoindent                  " Inherit indentation
+"set autoindent                  " Indent on Save
 
 " Performance
 set updatetime=300              " Faster completion
@@ -55,6 +55,7 @@ set nobackup                   " COC Recommended
 set nowritebackup              " COC Recommender
 
 " Enable filetype plugins
+filetype on
 filetype plugin on
 filetype indent on
 

@@ -12,4 +12,5 @@ nnoremap <C-g> :GitMessenger<CR>
 
 " Fuzzy Search
 nnoremap <C-f> :FZF<CR>
-
+nnoremap <Leader>/ :BLines<CR>
+nnoremap <Leader><Tab> :Buffers<CR>
