@@ -8,7 +8,7 @@ export ZSH=$HOME/.oh-my-zsh
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="clean"
+ZSH_THEME="amuse"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -94,9 +94,30 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
+# ALIASES
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+# File navigation
+alias c="clear"
+alias l="exa --header --long --grid"
+alias la="exa --header --long --grid --all"
+alias lt="exa --header --long --tree --level=2"
+alias lta="exa --header --long --tree --level=2 --all"
+alias lg="exa --header --long --git"
+alias lga="exa --header --long --git --all"
+
+# GIT
+alias g="git"
+
+# Bookmarks
+alias j="jump"
+
+# Rails
+alias r="rails"
+
+# Neovim
+alias v="nvim"
 
 # RBENV path
 export PATH="$HOME/.rbenv/bin:$PATH"
@@ -107,3 +128,4 @@ export PATH="$HOME/.emacs.d/bin:$PATH"
 
 # PIP Path
 export PATH="$HOME/.local/bin:$PATH"
+
