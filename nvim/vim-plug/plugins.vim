@@ -66,6 +66,7 @@ let g:ale_fix_on_save = 1
 
 
 " ----------------------------- FZF ------------------------------- {
+let g:fzf_preview_window = ['right:50%', 'ctrl-/']
 let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
   \ 'ctrl-s': 'split',

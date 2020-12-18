@@ -1,16 +1,24 @@
+" Change leader key to ,
+let mapleader=","
+
 " Change between buffers
 nnoremap <Tab> :b<Space>
+
+" Save
+nnoremap <Leader>s :w<CR> 
+" Save and quit
+nnoremap <Leader>q :wq<CR> 
 
 " Change between scrolloff
 nnoremap <Leader>z :let &scrolloff=999-&scrolloff<CR>
 
 " Undotree 
-nnoremap <C-u> :UndotreeToggle<CR>
+nnoremap <Leader>u :UndotreeToggle<CR>
 
 " Git-Messenger
-nnoremap <C-g> :GitMessenger<CR>
-
+nnoremap <Leader>g :GitMessenger<CR>
+												
 " Fuzzy Search
-nnoremap <C-f> :FZF<CR>
+nnoremap <Leader><Space> :Files<CR>
 nnoremap <Leader>/ :BLines<CR>
 nnoremap <Leader><Tab> :Buffers<CR>
