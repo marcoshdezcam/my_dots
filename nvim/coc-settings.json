@@ -2,13 +2,12 @@
 	"coc.preferences.formatOnSaveFiletypes": ["ruby"],
 	"solargraph.formatting": true,
 
-  "explorer.width": 40,
+  "explorer.width": 35,
   "explorer.icon.enableNerdfont": true,
-  "explorer.previewAction.onHover": false,
+  "explorer.previewAction.onHover": "content",
   "explorer.openAction.strategy": "select",
   "explorer.keyMappings.global": {
     "<cr>": ["expandable?", "expand", "open"],
     "v": "open:vsplit"
   }
-
 }

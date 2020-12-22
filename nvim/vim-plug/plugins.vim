@@ -19,6 +19,7 @@ Plug 'liuchengxu/vim-which-key'           " Show key mappings
 Plug 'justinmk/vim-sneak'                 " Better text navigation
 Plug 'mbbill/undotree'                    " Undo tree
 Plug 'iamcco/markdown-preview.vim'        " Preview markdown files
+Plug 'junegunn/goyo.vim'                  " Content on the middle of the screen
 " ------------------------------- GIT ------------------------------ {
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/gv.vim'
@@ -35,10 +36,12 @@ Plug 'tpope/vim-commentary'               " Comment/Uncomment code
 Plug 'ludovicchabant/vim-gutentags'       " Go-to definition (Automate c-tags creation)
 Plug 'tpope/vim-surround'                 " Change sorrounding tags easily
 Plug 'jiangmiao/auto-pairs'               " Auto close tags
+
 " -------------------------- Ruby & Ruby on Rails ------------------ {
 Plug 'vim-ruby/vim-ruby'                  " Ruby
 Plug 'tpope/vim-rails'                    " RoR
 " -------------------------- Ruby & Ruby on Rails ------------------ }
+
 " -------------------------- Themes & Appereance ------------------- {
 Plug 'ayu-theme/ayu-vim'
 Plug 'morhetz/gruvbox'
@@ -59,6 +62,9 @@ call plug#end()
 let g:ruby_recommender_style = 1          " Ruby-settings
 let g:mkdp_path_to_chrome = "/usr/bin/firefox" " Markddown preview
 
+" ----------------------------- KITE ------------------------------ {
+let g:kite_supported_languages = ['*']
+ 
 " ----------------------------- ALE ------------------------------- {
 "  Fix on save
 let g:ale_fix_on_save = 1  

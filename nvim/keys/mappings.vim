@@ -7,7 +7,7 @@ nnoremap <Tab> :b<Space>
 " Save
 nnoremap <Leader>s :w<CR> 
 " Save and quit
-nnoremap <Leader>q :wq<CR> 
+nnoremap <Leader>q :q<CR> 
 
 " Change between scrolloff
 nnoremap <Leader>z :let &scrolloff=999-&scrolloff<CR>

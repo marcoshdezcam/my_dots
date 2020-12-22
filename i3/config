@@ -264,12 +264,12 @@ assign [class="VirtualBox Manager"]                                           �
 assign [class="whatsapp-nativefier-d40211|Caprine|Slack"]               		  → 7
 
 ################## Workspace 8 -> Play
-assign [class="Spotify|Stremio"]                                              → 8
+assign [class="Spotify|Stremio|Musixmatch"]                                              → 8
 # fix for spotify
 for_window [class="Spotify"] move to workspace 8
 
 ################## Workspace 9 -> Settings 
-assign [class="Pavucontrol|Blueberry.py|MEGAsync|Pamac-manager|Pulseeffects"]                            → 9
+assign [class="Pavucontrol|Blueberry.py|MEGAsync|Pamac-manager|Pulseeffects|Arandr"]                            → 9
 
 ################## Workspace 10 -> Productivity
 assign [class="Brave"]                                                        → 10
@@ -426,6 +426,9 @@ for_window [class="MEGAsync"] floating enable
 for_window [class="Thunar"] floating enable
 for_window [class="zoom"] floating enable
 for_window [class="Pulseeffects"] floating enable
+for_window [class="Arandr"] floating enable
+for_window [class="Musixmatch"] floating enable
+for_window [class="Spotify"] floating enable
 #####################################################################################################################
 #################                          give focus to applications                               #################
 #####################################################################################################################

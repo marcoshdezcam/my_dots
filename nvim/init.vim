@@ -11,6 +11,8 @@ source $HOME/.config/nvim/keys/mappings.vim
 
 " COC Configs
 source $HOME/.config/nvim/plug-config/coc.vim
+" COC-Explorer Settings
+source $HOME/.config/nvim/plug-config/coc-explorer.vim 
 
 "Startify config
 source $HOME/.config/nvim/plug-config/start-screen.vim

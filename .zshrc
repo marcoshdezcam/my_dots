@@ -95,9 +95,6 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # ALIASES
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 # File navigation
 alias c="clear"
 alias l="exa --header --long --grid"
@@ -109,6 +106,9 @@ alias lga="exa --header --long --git --all"
 
 # GIT
 alias g="git"
+alias gs="git status"
+alias gc="git commit -S"
+alias gp="git push"
 
 # Bookmarks
 alias j="jump"
