@@ -372,6 +372,9 @@ bindsym Print exec --no-startup-id flameshot gui;focus
 #####################################################################################################################
 #################                          floating or tiled                                        #################
 #####################################################################################################################
+# Float all windows on the center
+for_window [floating] move absolute position center
+
 # Added by default ArcoLinux
 # Enable floating
 for_window [class="Arcolinux-welcome-app.py"] floating enable

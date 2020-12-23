@@ -41,5 +41,3 @@ nmap <space>e :CocCommand explorer
 nmap <space>ef :CocCommand explorer --preset floating<CR>
 nmap <space>eb :CocCommand explorer --preset buffer<CR>
 
-" List all presets
-nmap <space>el :CocList explPresets

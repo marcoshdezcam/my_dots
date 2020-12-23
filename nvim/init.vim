@@ -8,6 +8,7 @@ source $HOME/.config/nvim/vim-plug/plugins.vim
 source $HOME/.config/nvim/keys/mappings.vim
 
 " Plugin configs
+source $HOME/.config/nvim/plug-config/settings.vim
 
 " COC Configs
 source $HOME/.config/nvim/plug-config/coc.vim

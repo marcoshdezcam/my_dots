@@ -1,10 +1,10 @@
 {
-	"coc.preferences.formatOnSaveFiletypes": ["ruby"],
+	"coc.preferences.formatOnSaveFiletypes": ["ruby", "css", "markdown", "html", "sass"],
 	"solargraph.formatting": true,
 
   "explorer.width": 35,
   "explorer.icon.enableNerdfont": true,
-  "explorer.previewAction.onHover": "content",
+  "explorer.previewAction.onHover": false,
   "explorer.openAction.strategy": "select",
   "explorer.keyMappings.global": {
     "<cr>": ["expandable?", "expand", "open"],
