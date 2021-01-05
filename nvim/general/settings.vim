@@ -4,11 +4,11 @@ set fileencoding=utf-8          " File encoding
 
 " Indent
 set tabstop=2                   " Insert 2 spaces with a tab
-"set shiftwidth=2                " Spaces for indenting
-"set smarttab                    " Auto-detect 2 or 4 spaces
-"set expandtab                   " Convert tabs into spaces
-"set smartindent                 " Makes indenting smart
-"set autoindent                  " Indent on Save
+set shiftwidth=2                " Spaces for indenting
+set smarttab                    " Auto-detect 2 or 4 spaces
+set expandtab                   " Convert tabs into spaces
+set smartindent                 " Makes indenting smart
+set autoindent                  " Indent on Save
 
 " Performance
 set updatetime=300              " Faster completion
@@ -25,7 +25,6 @@ set wrap                        " Enable line wrapping
 set linebreak                   " Avoid wrapping in the middle of a word
 set conceallevel=0              " Show `` in markdown files
 set showmatch                   " Show matching brackets
-" set foldcolumn=1                " Add margin to the left
 
 " User interface
 set noshowmode                  " Hide cmd status. Already showing it on airline
@@ -40,9 +39,12 @@ set mouse=a                     " Enable mouse
 set title                       " Show current file on window title
 "set so=999                      " Cursor on the middle of the screen
 
+" Display line on character limit line
+" set colorcolumn=110
+" highlight ColorColumn ctermbg=darkgray
 
-" set laststatus=2                " Always display status line
-" set encoding=utf-8              " Display encoding
+set exrc                        " Enable per directory vimrc files
+set secure                      " Enable secure mode
 
 " Natural Split
 set splitbelow                  " Horizontal splits to below
@@ -55,8 +57,4 @@ set nobackup                   " COC Recommended
 set nowritebackup              " COC Recommender
 
 " Enable filetype plugins
-filetype on
-filetype plugin on
-filetype indent on
-
-
+filetype plugin indent on

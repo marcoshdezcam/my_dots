@@ -1,48 +1,89 @@
-" -----------------------------------------------------------------
-" ---------------------- Plugin configuration --------------------- {
-let g:ruby_recommender_style = 1          " Ruby-settings
-let g:mkdp_path_to_chrome = "/usr/bin/firefox" " Markddown preview
-" ----------------------------- KITE ------------------------------ {
+" -------------------------------------------------------------------
+" ---------------------- PLUGIN CONFIGURATION -----------------------
+" ------------------------------------------------------------------- {
+  
+" ============================================= Seeing is believing {
+augroup seeingIsBelievingSettings
+  autocmd!
+
+  autocmd FileType ruby nmap <buffer> <Enter> <Plug>(seeing-is-believing-mark-and-run)
+  autocmd FileType ruby xmap <buffer> <Enter> <Plug>(seeing-is-believing-mark-and-run)
+
+  autocmd FileType ruby nmap <buffer> <F4> <Plug>(seeing-is-believing-mark)
+  autocmd FileType ruby xmap <buffer> <F4> <Plug>(seeing-is-believing-mark)
+  autocmd FileType ruby imap <buffer> <F4> <Plug>(seeing-is-believing-mark)
+
+  autocmd FileType ruby nmap <buffer> <F5> <Plug>(seeing-is-believing-run)
+  autocmd FileType ruby imap <buffer> <F5> <Plug>(seeing-is-believing-run)
+augroup END
+" ================== }
+
+" ========================================== KITE - AI Autocomplete {
 let g:kite_supported_languages = ['*']
-" ----------------------------- ALE ------------------------------- {
-"  Fix on save
+let g:kite_tab_complete=1
+set completeopt+=menuone
+set completeopt+=noinsert
+autocmd CompleteDone * if !pumvisible() | pclose | endif
+"set statusline=%<%f\ %h%m%r%{kite#statusline()}%=%-14.(%l,%c%V%)\ %P
+" ================== }
+ 
+" ============================================ ALE - Linting engine {
 let g:ale_fix_on_save = 1  
-"let g:ale_linters = {'ruby': ['rubocop'], 'eruby': ['erubi']}
-"let g:ale_fixers = {'ruby': ['rubocop']}
-" ----------------------------- ALE ------------------------------- }
-" ----------------------------- FZF ------------------------------- {
+let g:ale_linters = {'ruby': ['rubocop'], 'eruby': ['erubi']}
+let g:ale_fixers = {'ruby': ['rubocop'], 'scss': ['prettier'], 'html': ['prettier'], 'css': ['prettier'], 'cpp': ['clang-format'] }
+let g:airline#extensions#ale#enabled = 1
+" ================== }
+
+" ============================================== FZF - Fuzzy Search {
 let g:fzf_preview_window = ['right:50%', 'ctrl-/']
 let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
-  \ 'ctrl-s': 'split',
+  \ 'ctrl-h': 'split',
   \ 'ctrl-v': 'vsplit' }
-" ----------------------------- FZF ------------------------------- }
-"--------------------------- TrueColors --------------------------- {
-if (has("nvim"))
-  "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
-  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-endif
-"For Neovim > 0.1.5 and Vim > patch 7.4.1799 < https://github.com/vim/vim/commit/61be73bb0f965a895bfb064ea3e55476ac175162 >
-"Based on Vim patch 7.4.1770 (`guicolors` option) < https://github.com/vim/vim/commit/8a633e3427b47286869aa4b96f2bfc1fe65b25cd >
-" < https://github.com/neovim/neovim/wiki/Following-HEAD#20160511 >
+" ================== }
+
+" ====================================================== TrueColors {
 if (has("termguicolors"))
   set termguicolors
 endif
-"---------------------------- TrueColors -------------------------- }
-"----------------------- Transparent background ------------------- {
+" ================== }
+ 
+" ========================================== Transparent background {
 autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
-"----------------------- Transparent background ------------------- }
-"------------------------------ IndentLine ------------------------ {
+" ================== }
+
+" ====================================================== IndentLine {
 let g:indentLine_char = ''
 let g:indentLine_first_char = ''
 let g:indentLine_showFirstIndentLevel = 1
 let g:indentLine_setColors = 0
-"------------------------------ IndentLine ------------------------ }
-" ---------------------- Plugin configuration ---------------------
+" ================== }
+
+" ============================================ CCLS Language Server {
+let s:ccls_settings = {
+         \ 'highlight': { 'lsRanges' : v:true },
+         \ }
+let s:ccls_command = ['ccls', '-init=' . json_encode(s:ccls_settings)]
+let g:LanguageClient_serverCommands = {
+      \ 'c': s:ccls_command,
+      \ 'cpp': s:ccls_command,
+      \ 'objc': s:ccls_command,
+      \ }
+" ================== }
+ 
+" ================================================ C++ Highlighting {
+let g:cpp_class_scope_highlight = 1
+let g:cpp_member_variable_highlight = 1
+let g:cpp_class_decl_highlight = 1
+" ================== }
+ 
+" ----------------------------------------------------------------- 
+" ---------------------- PLUGIN CONFIGURATION ---------------------
 " ----------------------------------------------------------------- }
 
-" -----------------------------------------------------------------
-" ----------------------------- Appereance ------------------------ {
+" ----------------------------------------------------------------- 
+" ----------------------------- APPEREANCE ------------------------ 
+" ----------------------------------------------------------------- { 
 " OceanicNext tweaks
 " let g:oceanic_next_terminal_bold = 1
 " let g:oceanic_next_terminal_italic = 1
@@ -57,5 +98,9 @@ colorscheme ayu
 let g:airline_theme = 'ayu'
 " Ayu theme tweaks
 let ayucolor="mirage"
-" ----------------------------- Appereance ------------------------
+" ----------------------------------------------------------------- 
+" ----------------------------- Appereance ------------------------ 
 " ----------------------------------------------------------------- }
+
+let g:ruby_recommender_style = 1          " Ruby-settings
+let g:mkdp_path_to_chrome = "/usr/bin/firefox" " Markddown preview
