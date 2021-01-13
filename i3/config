@@ -43,11 +43,11 @@ set $right l
 #exec --no-startup-id xrandr --output DVI-I-0 --right-of HDMI-0 --auto
 #exec --no-startup-id xrandr --output DVI-1 --right-of DVI-0 --auto
 #exec --no-startup-id xrandr --output DVI-D-1 --right-of DVI-I-1 --auto
-exec --no-startup-id xrandr --output HDMI2 --right-of HDMI1 --auto
+exec --no-startup-id xrandr --output eDP1 --mode 1366x768 --output HDMI1 --mode 2560x1440 --right-of HDMI1 --auto
 
 # my current setup
-#set $firstMonitor DP3
-#set $secondMonitor LVDS1
+set $firstMonitor eDP1
+set $secondMonitor HDMI1
 #set $firstMonitor DVI-I-0
 #set $secondMonitor HDMI-0
 #set $firstMonitor DVI-0
@@ -55,19 +55,17 @@ exec --no-startup-id xrandr --output HDMI2 --right-of HDMI1 --auto
 #set $firstMonitor DVI-I-1
 #set $secondMonitor DVI-D-1
 
-set $firstMonitor HDMI1
-set $secondMonitor HDMI2
-
-workspace 1 output $firstMonitor
+workspace 1 output $secondMonitor
 workspace 2 output $firstMonitor
-workspace 3 output $firstMonitor
+workspace 3 output $secondMonitor
 workspace 4 output $firstMonitor
 workspace 5 output $firstMonitor
 workspace 6 output $secondMonitor
-workspace 7 output $secondMonitor
-workspace 8 output $secondMonitor
-workspace 9 output $secondMonitor
+workspace 7 output $firstMonitor
+workspace 8 output $firstMonitor
+workspace 9 output $firstMonitor
 workspace 10 output $secondMonitor
+
 # switch to workspace
 bindsym $mod+1 workspace 1
 bindsym $mod+2 workspace 2
@@ -79,6 +77,7 @@ bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
+
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1; workspace 1
 bindsym $mod+Shift+2 move container to workspace 2; workspace 2
@@ -341,8 +340,8 @@ bindsym control+Shift+Escape exec --no-startup-id xfce4-taskmanager;focus
 #settings
 bindsym control+mod1+m exec --no-startup-id xfce4-settings-manager
 #arcolinux-logout
-bindsym control+mod1+k exec --no-startup-id arcolinux-logout
-bindsym control+mod1+l exec --no-startup-id arcolinux-logout
+#bindsym control+mod1+k exec --no-startup-id arcolinux-logout
+#bindsym control+mod1+l exec --no-startup-id arcolinux-logout
 #rofi theme selector
 bindsym control+mod1+r exec --no-startup-id rofi-theme-selector
 #xkill
@@ -596,8 +595,9 @@ bar {
     #position top
     position bottom
     #system icons
+    #output $firstMonitor
     #tray_output none
-    #tray_output $firstMonitor
+    tray_output $firstMonitor
     #tray_output $secondMonitor
     # OPTION 1 : i3status
     # type status_command i3status without the config file and

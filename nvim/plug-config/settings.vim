@@ -20,10 +20,11 @@ augroup END
 
 " ========================================== KITE - AI Autocomplete {
 let g:kite_supported_languages = ['*']
-let g:kite_tab_complete=1
 set completeopt+=menuone
 set completeopt+=noinsert
+set completeopt+=preview
 autocmd CompleteDone * if !pumvisible() | pclose | endif
+"let g:kite_log=1
 "set statusline=%<%f\ %h%m%r%{kite#statusline()}%=%-14.(%l,%c%V%)\ %P
 " ================== }
  
