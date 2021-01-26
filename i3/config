@@ -64,7 +64,7 @@ workspace 6 output $secondMonitor
 workspace 7 output $firstMonitor
 workspace 8 output $firstMonitor
 workspace 9 output $firstMonitor
-workspace 10 output $secondMonitor
+workspace 10 output $firstMonitor
 
 # switch to workspace
 bindsym $mod+1 workspace 1
@@ -242,16 +242,16 @@ font pango: FuraCode Nerd Font Mono
 #########################                          WORKSPACES                       #################################
 #####################################################################################################################
 ################## Workspace 1 -> Coding
-assign [class="Emacs|Code"]                                                   → 1
+assign [class="Emacs|Code|jetbrains-clion|jetbrains-rubymine"]                  → 1
 
 ################## Workspace 2 -> GIT
-assign [class="GitKraken|Cacher"]                                             → 2
+assign [class="GitKraken|Cacher"]                                               → 2
 
 ################## Workspace 3 -> Web
-assign [class="firefox"]                                                      → 3
+assign [class="firefox"]                                                        → 3
 
 ################## Workspace 4 -> Notes & Reading
-assign [class="Foliate|Joplin|okular"]                                               → 4
+assign [class="Foliate|Joplin|okular"]                                          → 4
 
 ################## Workspace 5 -> Zoom
 assign [class="Zoom|zoom"]                                                    → 5
@@ -280,8 +280,8 @@ assign [class="Brave"]                                                        �
 # Megasync
 exec_always --no-startup-id megasync
 # Productivity manager (Brave)
-exec --no-startup-id brave
-for_window [class="Brave"] focus
+# exec --no-startup-id brave
+# for_window [class="Brave"] focus
 
 # TRAY APPLICATIONS
 # applications that are not installed will not start
@@ -415,7 +415,7 @@ for_window [window_role="^Preferences$"] floating enable
 for_window [window_role="setup"] floating enable
 
 # Added manually
-for_window [class="Pamac-manager"] floating enable
+# for_window [class="Pamac-manager"] floating enable
 for_window [class="whatsapp-nativefier-d40211"] floating enable
 for_window [class="Pavucontrol"] floating enable
 for_window [class="Variety Preferences"] floating enable
@@ -430,7 +430,7 @@ for_window [class="zoom"] floating enable
 for_window [class="Pulseeffects"] floating enable
 for_window [class="Arandr"] floating enable
 for_window [class="Musixmatch"] floating enable
-for_window [class="Spotify"] floating enable
+#for_window [class="Spotify"] floating enable
 #####################################################################################################################
 #################                          give focus to applications                               #################
 #####################################################################################################################
