@@ -19,9 +19,9 @@ window:
   #
   # Specified in number of columns/lines, not pixels.
   # If both are `0`, this setting is ignored.
-  # dimensions:
-  #   columns: 120
-  #   lines: 45
+  dimensions:
+     columns: 120
+     lines: 25
 
   # Window position (changes require restart)
   #
@@ -284,7 +284,6 @@ font:
 # The value `0.0` is completely transparent and `1.0` is opaque.
 background_opacity: 0.95
 colors:
-  # Default colors
   primary:
     background: '#0A0E14'
     foreground: '#B3B1AD'
